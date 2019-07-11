@@ -1,6 +1,7 @@
+DROP TABLE castings;
 DROP TABLE movies;
 DROP TABLE stars;
-DROP TABLE castings;
+
 
 CREATE TABLE movies (
   id SERIAL4 PRIMARY KEY,
@@ -16,7 +17,7 @@ CREATE TABLE stars (
 
 CREATE TABLE castings (
   id SERIAL4 PRIMARY KEY,
-  movie_id INT4 REFERENCES movie(id) ON DELETE CASCADE,
-  star_id INT4 REFERENCES star(id) ON DELETE CASCADE,
+  movie_id INT4 REFERENCES movies(id) ON DELETE CASCADE,
+  star_id INT4 REFERENCES stars(id) ON DELETE CASCADE,
   fee INT4
 );
