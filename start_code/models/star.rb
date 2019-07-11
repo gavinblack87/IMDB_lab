@@ -15,11 +15,11 @@ end
 def save()
   sql = "INSERT INTO stars
   (first_name,
-  second_name
+  last_name
     ) VALUES ( $1, $2 ) RETURNING id "
-values = [@first_name, @second_name]
-star = SqlRunner.run (sql, values).first
-@id = user ['id'].to_i
+values = [@first_name, @last_name]
+star = SqlRunner.run(sql, values).first
+@id = star['id'].to_i
 end
 
 def update()
@@ -45,13 +45,5 @@ def self.delete_all()
   sql = 'DELETE FROM stars'
   SqlRunner.run(sql)
 end
-
-
-
-
-
-
-
-
 
 end

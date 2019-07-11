@@ -5,9 +5,10 @@ require_relative('models/movie')
 
 require('pry-byebug')
 
-Movie.delete_all()
+
 Star.delete_all()
-Casting.delete_all()
+# Movie.delete_all()
+# Casting.delete_all()
 
 
 star1 = Star.new( {'first_name' => 'Olivia', 'last_name' => 'Coleman'})
