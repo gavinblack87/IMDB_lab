@@ -8,7 +8,7 @@ CREATE TABLE movies (
   title VARCHAR(255),
   genre VARCHAR(255)
 );
-
+--comment
 CREATE TABLE stars (
   id SERIAL4 PRIMARY KEY,
   first_name VARCHAR(255),
